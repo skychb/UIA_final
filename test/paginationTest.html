@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture">
+      <ul class="pagination center-block" style="display:inline-block;">
+        <li class="prev"><a href="#"><</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="next"><a href="#">></a></li>
+      </ul>
+    </div>
+    <script type="text/javascript" src="../node_modules/requirejs/require.js"></script>
+    <script type="text/javascript">
+        require.config({
+            paths : {
+                'qunit':'../bower_components/qunit/qunit/qunit',
+                "jquery" : "../node_modules/jquery/dist/jquery.min",
+                "eventEmitter" : "../bower_components/eventEmitter/EventEmitter.min"
+            }
+        })
+        require(['qunit','paginationTest'], function(QUnit, paginationTest){
+            QUnit.load();
+            QUnit.start();
+            paginationTest.run();
+        });
+    </script>
+</body>
+</html>

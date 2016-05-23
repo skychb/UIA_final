@@ -1,0 +1,21 @@
+{
+  "name": "uia",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "skychb <skyler@nhnnext.org>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/skychb/UIA_final",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "qunit": "^1.23.1",
+    "eventEmitter": "^5.0.0"
+  }
+}
