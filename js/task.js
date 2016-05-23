@@ -29,6 +29,18 @@ define(["jquery", "handlebars", "template", "ajax"], function($, Handlebars, Tem
     })
   }
 
+  function caching(index, max){
+    var cache = {};
+    var url = base+"/page?start="+index+"&limit=1";
+    $.get(url)
+    .done(TodoLists){
+      cache[TodoLists.id] = $(template_up({"inputValue":inputValue.todo,
+        "todo-id":inputValue.id,
+        "completed":inputValue.completed}));
+    }
+
+  }
+
   return{
     "load" : load,
     "init" : init
