@@ -38,7 +38,6 @@ define(["jquery", "handlebars", "template", "ajax"], function($, Handlebars, Tem
         "todo-id":inputValue.id,
         "completed":inputValue.completed}));
     }
-
   }
 
   return{
